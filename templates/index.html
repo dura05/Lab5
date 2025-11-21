@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Лабораторная работа №5</title>
+  </head>
+  <body>
+    <h1>Лабораторная работа №5</h1>
+    <h2>Хэллоу, {{ user.name }} ({{ user.email }})</h2>
+    <form action="{{ url_for('logout') }}" method="get">
+      <button type="submit">Выход</button>
+    </form>
+  </body>
+</html>

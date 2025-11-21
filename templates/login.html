@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Вход</title>
+  </head>
+  <body>
+    <h1>Вход</h1>
+    {% if message %}
+      <p style="color: rgb(212, 202, 53);">{{ message }}</p>
+    {% endif %}
+    <form action="{{ url_for('login_post') }}" method="post">
+      <label>Электронная почта:<br>
+        <input type="email" name="email" required>
+      </label><br><br>
+      <label>Пароль:<br>
+        <input type="password" name="password" required>
+      </label><br><br>
+      <button type="submit">Вход</button>
+    </form>
+    <p>Нет аккаунта? <a href="{{ url_for('signup_get') }}">Зарегистрироваться</a></p>
+  </body>
+</html>
